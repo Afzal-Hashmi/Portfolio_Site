@@ -1,0 +1,312 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Afzal Hashmi</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="bottom-left">
+        <div id="off">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M280-240q-100 0-170-70T40-480q0-100 70-170t170-70h400q100 0 170 70t70 170q0 100-70 170t-170 70H280Zm0-80h400q66 0 113-47t47-113q0-66-47-113t-113-47H280q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-40q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm200-120Z"
+            />
+          </svg>
+        </div>
+        <div id="on">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M280-240q-100 0-170-70T40-480q0-100 70-170t170-70h400q100 0 170 70t70 170q0 100-70 170t-170 70H280Zm0-80h400q66 0 113-47t47-113q0-66-47-113t-113-47H280q-66 0-113 47t-47 113q0 66 47 113t113 47Zm400-40q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM480-480Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="full-container">
+        <div class="container" id="home">
+          <header class="header">
+            <div class="logo">Afzal Hashmi</div>
+            <ul class="navbar">
+              <li class="linkk">
+                <a href="#Education" class="link">Education</a>
+              </li>
+              <li class="linkk">
+                <a href="#skills" class="link">Skills</a>
+              </li>
+              <li class="linkk">
+                <a href="#contact" class="link">Contact Me</a>
+              </li>
+            </ul>
+          </header>
+
+          <div class="hero">
+            <div class="faded-text afzal">Afzal Hashmi</div>
+
+            <div class="hero_left">
+              <h1 class="my_name">Hi! I am <span>{{Hero.name}}</span></h1>
+              <h1 class="my_name">{{Hero.title}}</h1>
+              <div class="description">
+                {{Hero.aboutme}}
+              </div>
+              <div class="hireme">
+                <a
+                  href="https://www.linkedin.com/in/muhammad-afzal-hashmi-78a6a522b"
+                >
+                  Hire me</a
+                >
+              </div>
+            </div>
+
+            <div class="hero_right">
+              <div class="img_container">
+                <img src="{%static 'img/user-image.png'%}" alt="" class="my_img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Education">
+        <div class="education-container">
+          <h2 class="education-title">Education</h2>
+          {% for education in Education %}
+          <div class="education-card">
+            <div class="content">
+              <div class="title">
+                {{education.institution}}
+              </div>
+              <div class="educationDescription">
+                {{education.degree}}
+              </div>
+              <div class="year">{{education.year}}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id="skills">
+        <div class="skill-container">
+          <div class="faded-text faded">SKILL</div>
+          <h2 class="education-title title-skill">Skill</h2>
+          <div class="Inner-container">
+          <div class="projects">
+            <h3>{{kill.title}}</h3>
+          {{kill.description}}
+          <ol>
+            {% for skills in list_skills%}
+            <li>{{skills.skill}}</li>
+            {% endfor %}
+          </ol>
+          </div>
+          <div class="technologies">
+            <img
+              class="express icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+            />
+
+            <img
+              class="github icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+            />
+
+            <img
+              class="cpp icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg"
+            />
+
+            <img
+              class="sql icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+            />
+
+            <img
+              class="git icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+            />
+
+            <img
+              class="javascript icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
+            />
+
+            <img
+              class="mongodb icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+            />
+
+            <img
+              class="mysql icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+            />
+
+            <img
+              class="python icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+            />
+
+            <img
+              class="wordpress icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg"
+            />
+
+            <img
+              class="nodejs icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
+            />
+
+            <img
+              class="html icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"
+            />
+
+            <img
+              class="css icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg"
+            />
+
+            <img
+              class="postgresql icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="contact-container">
+        <div class="heading">
+          <h2 class="education-title contact">Contact</h2>
+        </div>
+        <div class="contact-inner">
+          <div class="form-side">
+            <h2 class="contact-form">Contact Me:</h2>
+            <form action="/contactme" method="POST">  {% csrf_token %}
+              <div class="inner-form">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="inner-form">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  id="email"
+                  required
+                />
+              </div>
+              <div class="inner-form">
+                <label for="phone">Phone No:</label>
+                <input
+                  type="tel"
+                  pattern="[0-9]{11}"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone No"
+                />
+              </div>
+              <div class="inner-form btn">
+                <input type="submit" value="Submit" class="submit-btn" />
+              </div>
+            </form>
+          </div>
+          <div class="source-side">
+            <div class="source-code">
+              <a
+                href="https://github.com/Afzal-Hashmi/Portfolio-Site"
+                target="_blank"
+                rel="noreferrer"
+                class="github"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  alt=""
+                  width="50px"
+                  height="50px"
+                />
+              </a>
+            </div>
+            <h3 class="source-code-heading">Source Code</h3>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    // For Dark Mode
+    let fullContainer = document.querySelector(".full-container");
+    let headLink = document.querySelector(".linkk");
+    let toggleDarkModeOff = document.querySelector("#on");
+    let toggleDarkModeOn = document.querySelector("#off");
+    let fadedText = document.querySelector(".faded-text");
+    let hireMe = document.querySelector(".hireme");
+    let img = document.querySelector(".img_container");
+    let description = document.querySelector(".description");
+    let educationSection = document.querySelector("#Education");
+    let skill_container = document.querySelector("#skills");
+    let Inner_container = document.querySelector(".Inner-container");
+    let contact = document.querySelector("#contact");
+    let contact_inner = document.querySelector(".contact-inner");
+
+    toggleDarkModeOff.style.display = "none";
+
+    toggleDarkModeOn.addEventListener(
+      "click",
+      () => (
+        (fullContainer.style.backgroundColor = "#575757"),
+        (headLink.style.color = "white"),
+        (description.style.color = "white"),
+        (img.style.backgroundColor = "#878787"),
+        (fadedText.style.color = "#393939"),
+        (hireMe.style.color = "white"),
+        (toggleDarkModeOff.style.display = "block"),
+        (toggleDarkModeOn.style.display = "none"),
+        (educationSection.style.backgroundColor = "#575757"),
+        (skill_container.style.backgroundColor = "#575757"),
+        (Inner_container.style.backgroundColor = "#949494cf"),
+        (contact.style.backgroundColor = "#575757"),
+        (contact_inner.style.backgroundColor = "#949494cf")
+      )
+    );
+    toggleDarkModeOff.addEventListener(
+      "click",
+      () => (
+        (fullContainer.style.backgroundColor = "white"),
+        (description.style.color = "black"),
+        (toggleDarkModeOn.style.display = "block"),
+        (toggleDarkModeOff.style.display = "none"),
+        (img.style.backgroundColor = "#fff"),
+        (hireMe.style.color = "grey"),
+        (fadedText.style.color = "rgb(231, 231, 231)"),
+        (educationSection.style.backgroundColor = "#c0c0c0"),
+        (skill_container.style.backgroundColor = "white"),
+        (Inner_container.style.backgroundColor = "#e6e6e6cf"),
+        (contact_inner.style.backgroundColor = "#e6e6e6cf"),
+        (contact.style.backgroundColor = "#c0c0c0")
+      )
+    );
+  </script>
+</html>
